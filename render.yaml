@@ -1,0 +1,26 @@
+services:
+  - type: web
+    name: chapeau-noir-bot
+    env: node
+    plan: starter # Plan payant requis pour le disque persistant. En "free", les sessions sont perdues a chaque redemarrage.
+    buildCommand: npm install
+    startCommand: node index.js
+    healthCheckPath: /health
+    # Disque persistant : conserve les sessions WhatsApp entre les redeploiements.
+    disk:
+      name: chapeau-noir-data
+      mountPath: /data
+      sizeGB: 1
+    envVars:
+      - key: DATA_DIR
+        value: /data
+      - key: API_URL
+        value: https://bj-tricks-ai.vercel.app/chat
+      - key: GROUP_LINK
+        sync: false
+      - key: AI_RESPONSE_DELAY
+        value: "2900"
+      - key: SPAM_LIMIT
+        value: "5"
+      - key: SPAM_WINDOW
+        value: "10000"

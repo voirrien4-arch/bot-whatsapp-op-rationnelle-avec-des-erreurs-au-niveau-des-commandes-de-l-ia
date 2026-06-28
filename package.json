@@ -1,0 +1,22 @@
+{
+  "name": "chapeau-noir-bot",
+  "version": "3.0.0",
+  "description": "Assistant WhatsApp Hacking Ethique by Mcamara",
+  "main": "index.js",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node index.js"
+  },
+  "dependencies": {
+    "baileys": "6.7.23",
+    "axios": "^1.7.7",
+    "dotenv": "^16.4.5",
+    "pino": "^9.5.0",
+    "fs-extra": "^11.2.0",
+    "form-data": "^4.0.1",
+    "qrcode-terminal": "^0.12.0"
+  }
+}

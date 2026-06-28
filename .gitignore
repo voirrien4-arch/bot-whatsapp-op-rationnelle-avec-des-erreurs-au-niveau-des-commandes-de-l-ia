@@ -1,0 +1,15 @@
+# Dependances
+node_modules
+
+# Environnement
+.env
+.env*.local
+
+# Sessions WhatsApp et donnees (NE JAMAIS commiter)
+data/sessions
+data/*.json
+auth_info_*
+
+# Systeme
+.DS_Store
+*.log
